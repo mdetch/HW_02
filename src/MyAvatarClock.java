@@ -19,9 +19,6 @@ public class MyAvatarClock extends MyAvatar implements Runnable{
 		}
 	}
 	public void paint(Graphics g){
-		Image image = createImage(900,900); 
-		Graphics offscreen = image.getGraphics();
-		g.drawImage(image,0,0,this);
 		super.paint(g);
 		g.drawOval(160,280,80,40);		//eye
 		g.drawOval(290,280,80,40);
@@ -34,9 +31,6 @@ public class MyAvatarClock extends MyAvatar implements Runnable{
 		paintEyes(g,i);
 		i++;
 		
-	}
-	public void update(Graphics g){
-		   paint(g);
 	}
 	
 	public void paintClock(Graphics g, int i){
