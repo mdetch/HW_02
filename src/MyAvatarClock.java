@@ -34,8 +34,9 @@ public class MyAvatarClock extends MyAvatar implements Runnable{
 	}
 	
 	public void paintClock(Graphics g, int i){
+		g.setFont(new Font("Monospace", Font.BOLD, 20));
 		for(int j=1; j<=60; j++){
-			int x = 270+(int)(Math.sin(Math.toRadians(6*j))*260);
+			int x = 265+(int)(Math.sin(Math.toRadians(6*j))*260);
 			int y = 325-(int)(Math.cos(Math.toRadians(6*j))*260);
 			g.setColor(Color.BLACK);
 			if(j==i) g.setColor(Color.YELLOW);
